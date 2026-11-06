@@ -43,16 +43,9 @@ guardar las imágenes en `assets/screenshots/` y mantener estos nombres:
 
 | Pantalla | Archivo pendiente |
 | --- | --- |
-| Portada / página del proyecto | `assets/screenshots/portada.png` |
-| Arena de Troya | `assets/screenshots/gameplay.png` |
-| Prueba de combate | `assets/screenshots/gameplay-02.png` |
-
-Cuando se incorporen las imágenes al repositorio, se pueden mostrar
-directamente con:
-
-``` md
-![Escena de juego](assets/screenshots/gameplay.png)
-```
+| Portada / página del proyecto | ![Portada del juego](assets/screenshots/portada.png) |
+| Arena de Troya | ![Partida típica](assets/screenshots/gameplay.png) |
+| Pantalla de victoria | ![Victoria](assets/screenshots/gameplay-02.png) |
 
 ## Jugar
 
@@ -62,7 +55,7 @@ La dirección prevista para la versión web publicada en GitHub Pages es:
 
 No requiere instalación: se ejecuta desde un navegador compatible una vez
 publicada la versión actualizada. Para probarlo en local es necesario abrir el
-proyecto desde un servidor HTTP (por ejemplo, `python -m http.server`) debido
+proyecto desde un servidor HTTP (por ejemplo, `npx http-server`) debido
 a los módulos JavaScript.
 
 ### Controles del prototipo
@@ -82,7 +75,7 @@ reduce la vida y el aura. Son valores provisionales de prueba.
 | --- | --- |
 | Título | La Aurisea |
 | Estudio | Ligero Productions |
-| Autor | Ignacio Ligero |
+| Autor | Ignacio Ligero Martín |
 | Tipo de proyecto | Trabajo universitario |
 | Género | 2D Horde / Arena Survival |
 | Modo | Un jugador |
@@ -117,10 +110,6 @@ la-aurisea/
 └── README.md
 ```
 
-Los archivos gráficos `base.png`, `platform.png` y `star.png` se conservan
-por ahora como recursos de la antigua plantilla, pero ya no se utilizan.
-La estructura podrá ampliarse a medida que se incorporen nuevos sistemas.
-
 ## Tecnologías
 
 -   **Phaser 3:** framework utilizado para ejecutar el juego en el
@@ -138,7 +127,7 @@ La estructura podrá ampliarse a medida que se incorporen nuevos sistemas.
 
 **Ligero Productions**
 
--   Ignacio Ligero --- diseño y desarrollo del proyecto.
+-   Ignacio Ligero Martín --- diseño y desarrollo del proyecto.
 
 Los recursos externos y sus correspondientes autores/licencias se
 detallan en [`assets.md`](assets.md). La atribución de herramientas y
