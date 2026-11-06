@@ -1,35 +1,30 @@
 /**
- * Escena para la precarga de los assets que se usarán en el juego.
- * Esta escena se puede mejorar añadiendo una imagen del juego y una 
- * barra de progreso de carga de los assets
- * @see {@link https://gamedevacademy.org/creating-a-preloading-screen-in-phaser-3/} como ejemplo
- * sobre cómo hacer una barra de progreso.
+ * Escena de precarga de los recursos del juego.
  */
 export default class Boot extends Phaser.Scene {
-  /**
-   * Constructor de la escena
-   */
   constructor() {
     super({ key: 'boot' });
   }
 
   /**
-   * Carga de los assets del juego
+   * Por ahora reutilizamos el personaje de la plantilla como sprite provisional.
    */
   preload() {
-    // Con setPath podemos establecer el prefijo que se añadirá a todos los load que aparecen a continuación
-    this.load.setPath('assets/sprites/');
-    this.load.image('platform', 'platform.png');
-    this.load.image('base', 'base.png');
-    this.load.image('star', 'star.png');
-    this.load.image('player', 'player.png');
+    this.load.image('player', 'assets/sprites/player.png');
   }
 
   /**
-   * Creación de la escena. En este caso, solo cambiamos a la escena que representa el
-   * nivel del juego
+   * Creamos un sprite sencillo para los enemigos mientras se prepara el arte definitivo.
    */
   create() {
+    const graphics = this.make.graphics({ x: 0, y: 0 });
+    graphics.fillStyle(0x8d3e32);
+    graphics.fillCircle(16, 16, 14);
+    graphics.lineStyle(3, 0xe8b67a);
+    graphics.strokeCircle(16, 16, 13);
+    graphics.generateTexture('enemy', 32, 32);
+    graphics.destroy();
+
     this.scene.start('level');
   }
 }

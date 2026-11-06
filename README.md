@@ -29,27 +29,23 @@ héroe hacia su hogar.
 El diseño completo, sus mecánicas y la propuesta de los seis escenarios
 se encuentran en el [Documento de Diseño (GDD)](GDD.md).
 
-> **Estado del proyecto --- Hito 2:** el GDD recoge el enfoque de diseño
-> previsto. La versión ejecutable publicada debe entenderse como una
-> build de desarrollo/prototipo y no necesariamente implementa todavía
-> todas las mecánicas descritas en el documento. Se irá actualizando
-> conforme avance la producción.
+> **Estado del proyecto — Hito 2:** primer prototipo jugable de la arena de Troya.
+> Se ha sustituido la prueba de plataformas y estrellas por movimiento cenital,
+> enemigos perseguidores, combate provisional con espada, lanza y arco,
+> barras de vida y aura, temporizador y condición de victoria/derrota.
+> Los otros cinco escenarios, los jefes, el arte definitivo y el sonido
+> siguen pendientes. Consulta el [GDD](GDD.md) para el diseño previsto.
 
 ## Capturas
 
 Añadir aquí capturas reales de la versión ejecutable. Se recomienda
 guardar las imágenes en `assets/screenshots/` y mantener estos nombres:
 
-  --------------------------------------------------------------------------
-  Pantalla                            Captura
-  ----------------------------------- --------------------------------------
-  Pantalla inicial / página del       `assets/screenshots/portada.png`
-  proyecto                            
-
-  Escena de juego o prueba actual     `assets/screenshots/gameplay.png`
-
-  Otra mecánica o escena relevante    `assets/screenshots/gameplay-02.png`
-  --------------------------------------------------------------------------
+| Pantalla | Archivo pendiente |
+| --- | --- |
+| Portada / página del proyecto | `assets/screenshots/portada.png` |
+| Arena de Troya | `assets/screenshots/gameplay.png` |
+| Prueba de combate | `assets/screenshots/gameplay-02.png` |
 
 Cuando se incorporen las imágenes al repositorio, se pueden mostrar
 directamente con:
@@ -60,37 +56,40 @@ directamente con:
 
 ## Jugar
 
-La versión web publicada está disponible en GitHub Pages:
+La dirección prevista para la versión web publicada en GitHub Pages es:
 
 **[Jugar a La Aurisea](https://theligero.github.io/la-aurisea/)**
 
-No requiere instalación: se ejecuta desde un navegador compatible.
+No requiere instalación: se ejecuta desde un navegador compatible una vez
+publicada la versión actualizada. Para probarlo en local es necesario abrir el
+proyecto desde un servidor HTTP (por ejemplo, `python -m http.server`) debido
+a los módulos JavaScript.
+
+### Controles del prototipo
+
+- **WASD o flechas:** moverse en ocho direcciones, con velocidad diagonal normalizada.
+- **Ratón y clic izquierdo:** apuntar y atacar.
+- **1 / 2 / 3:** espada, lanza y arco, respectivamente.
+- **ESC:** pausar y continuar.
+
+**Objetivo de Troya:** sobrevivir 45 segundos y terminar con un mínimo de
+40 puntos de aura. Derrotar enemigos da 10 puntos de aura; recibir daño
+reduce la vida y el aura. Son valores provisionales de prueba.
 
 ## Información del proyecto
 
-  ----------------------------------------------------------------------------------------------------------------
-  Campo                               Información
-  ----------------------------------- ----------------------------------------------------------------------------
-  Título                              La Aurisea
-
-  Estudio                             Ligero Productions
-
-  Autor                               Ignacio Ligero
-
-  Tipo de proyecto                    Trabajo universitario
-
-  Género                              2D Horde / Arena Survival
-
-  Modo                                Un jugador
-
-  Plataforma prevista                 PC / navegador
-
-  Tecnología                          Phaser 3, JavaScript, HTML y CSS
-
-  Repositorio                         [github.com/theligero/la-aurisea](https://github.com/theligero/la-aurisea)
-
-  Versión web                         [theligero.github.io/la-aurisea](https://theligero.github.io/la-aurisea/)
-  ----------------------------------------------------------------------------------------------------------------
+| Campo | Información |
+| --- | --- |
+| Título | La Aurisea |
+| Estudio | Ligero Productions |
+| Autor | Ignacio Ligero |
+| Tipo de proyecto | Trabajo universitario |
+| Género | 2D Horde / Arena Survival |
+| Modo | Un jugador |
+| Plataforma prevista | PC / navegador |
+| Tecnología | Phaser 3, JavaScript, HTML y CSS |
+| Repositorio | [github.com/theligero/la-aurisea](https://github.com/theligero/la-aurisea) |
+| Versión web | [theligero.github.io/la-aurisea](https://theligero.github.io/la-aurisea/) |
 
 ## Estructura del repositorio
 
@@ -108,19 +107,19 @@ la-aurisea/
 ├── src/
 │   ├── boot.js
 │   ├── end.js
+│   ├── enemy.js
 │   ├── game.js
 │   ├── level.js
-│   ├── platform.js
-│   ├── player.js
-│   └── star.js
+│   └── player.js
 ├── index.html
 ├── GDD.md
 ├── assets.md
 └── README.md
 ```
 
-La estructura refleja la organización del repositorio de desarrollo;
-podrá ampliarse a medida que se incorporen nuevos recursos y sistemas.
+Los archivos gráficos `base.png`, `platform.png` y `star.png` se conservan
+por ahora como recursos de la antigua plantilla, pero ya no se utilizan.
+La estructura podrá ampliarse a medida que se incorporen nuevos sistemas.
 
 ## Tecnologías
 

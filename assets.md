@@ -39,42 +39,23 @@ comprobarse en la ficha de cada paquete o archivo antes de incorporarlo.
 
 ## 2. Recursos gráficos presentes en el repositorio
 
-  -------------------------------------------------------------------------------
-  Archivo                         Uso identificado        Procedencia / licencia
-  ------------------------------- ----------------------- -----------------------
-  `assets/sprites/player.png`     Sprite del personaje    La procedencia exacta
-                                  controlable del         no queda identificada
-                                  prototipo actual.       en los archivos del
-                                                          repositorio revisado.
-                                                          Verificar la fuente
-                                                          original y su licencia.
+| Archivo | Estado en el Hito 2 | Procedencia y licencia |
+| --- | --- | --- |
+| `assets/sprites/player.png` | Se utiliza como personaje provisional. | Fuente y licencia pendientes de confirmar. |
+| `assets/sprites/platform.png` | Recurso heredado de la plantilla; no se utiliza. | Fuente y licencia pendientes de confirmar. |
+| `assets/sprites/base.png` | Recurso heredado de la plantilla; no se utiliza. | Fuente y licencia pendientes de confirmar. |
+| `assets/sprites/star.png` | Recurso heredado de la plantilla; no se utiliza. | Fuente y licencia pendientes de confirmar. |
 
-  `assets/sprites/platform.png`   Sprite de plataforma    La procedencia exacta
-                                  utilizado por la escena no queda identificada
-                                  de prueba actual.       en los archivos del
-                                                          repositorio revisado.
-                                                          Verificar la fuente
-                                                          original y su licencia.
+**Actualización Hito 2:** `player.png` se sigue utilizando como personaje
+provisional. Los sprites `platform.png`, `base.png` y `star.png` se conservan
+como recursos de la antigua plantilla, pero ya **no se cargan ni se utilizan**
+en el juego. Los enemigos se dibujan con una textura geométrica creada por
+código (`src/boot.js`); la arena, los indicadores y los ataques se dibujan
+también mediante Phaser. No se han integrado nuevos recursos externos.
 
-  `assets/sprites/base.png`       Elemento gráfico        La procedencia exacta
-                                  asociado a las          no queda identificada
-                                  bases/plataformas de la en los archivos del
-                                  escena de prueba.       repositorio revisado.
-                                                          Verificar la fuente
-                                                          original y su licencia.
-
-  `assets/sprites/star.png`       Objeto coleccionable de La procedencia exacta
-                                  la escena de prueba     no queda identificada
-                                  actual.                 en los archivos del
-                                                          repositorio revisado.
-                                                          Verificar la fuente
-                                                          original y su licencia.
-  -------------------------------------------------------------------------------
-
-**Importante:** estos recursos son los que aparecen en la
-build/prototipo incluida en el ZIP revisado. No deben presentarse como
-sprites definitivos de Odiseo, enemigos o escenarios de la versión final
-del diseño.
+Estos gráficos no deben presentarse como arte definitivo de Odiseo,
+enemigos o escenarios. La procedencia de los PNG originales sigue
+pendiente de confirmar.
 
 ## 3. Librerías y tecnología
 

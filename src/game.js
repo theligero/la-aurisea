@@ -3,26 +3,27 @@ import End from './end.js';
 import Level from './level.js';
 
 /**
- * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
- * la clase Game de Phaser, encargada de crear e iniciar el juego.
+ * Configuración principal de Phaser. La arena se ve completa, sin gravedad ni cámara móvil.
  */
 let config = {
-    type: Phaser.AUTO,
-    width:  1000,
-    height: 500,
-    scale: {
-        // mode: Phaser.Scale.FIT,  
-        autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
-    },
-    pixelArt: true,
-    scene: [Boot, Level, End],
-    physics: { 
-        default: 'arcade', 
-        arcade: { 
-            gravity: { y: 400 }, 
-            debug: false 
-        } 
+  type: Phaser.AUTO,
+  parent: 'game-container',
+  width: 1000,
+  height: 600,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH
+  },
+  pixelArt: true,
+  backgroundColor: '#17140f',
+  scene: [Boot, Level, End],
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 0 },
+      debug: false
     }
+  }
 };
 
 new Phaser.Game(config);
